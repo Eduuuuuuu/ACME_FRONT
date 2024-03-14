@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>ACME FILMES</title>
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                principal: '#000000'
+              },
+              fontFamily: {
+                indie: ['Khula', 'cursive']
+              },
+              spacing: {
+                ll: '120px'
+              }
+            }
+          }
+        }
+      </script>
+</head>
+<body class="bg-principal">
+    <header class="flex justify-center">
+        <div class="p-2 flex items-center flex-col">
+            <img class="h-16 mb-10" src="./img/logo.png" alt="">
+            <div class="flex flex-row">
+                <div class="flex flex-row space-x-6">
+                    <h2 class="text-yellow-500">
+                        FILMES
+                    </h2>
+                    <h2 class="text-white">
+                        CATEGORIAS
+                    </h2>
+                </div>
+                    <input class="w-96 h-10 rounded-full indent-8" type="text" placeholder="Procurar um filme...">
+                
+            </div>
+        </div>
+        
+    </header>
+</body>
+</html>
