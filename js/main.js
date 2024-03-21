@@ -1,39 +1,39 @@
 'use strict'
 
-import { getFilmes, getFilmeById, postFilme, deleteFilme} from "./filmes";
+import {getFilmes} from "./filmes.js";
 
 function criarCard(filme) {
+    const button = document.createElement('button')
+    button.classList.add('bg-transparent')
+    const id = filme.id
+    button.id = id
+    button.onclick = setIdFilme
     const card = document.createElement('div')
+    const imagem = document.createElement('img')
+    imagem.src = filme.foto_capa
+    imagem.classList.add('w-mdivposterw', 'h-mdivposrterh')
     const titulo = document.createElement('h2')
     titulo.textContent = filme.nome
-    const texto = document.createElement('textarea')
-    texto.textContent = filme.sinopse
-    card.append(titulo, texto)
+    titulo.classList.add('text-titulo', 'text-white', 'font-bold')
+    card.append(titulo, imagem)
+    button.append(card)
 
-    return card
+    return button
 }
 
 async function preencherContainer (){
-    const container = document.querySelector('body')
+    const container = document.getElementById('lista_filmes')
     const filmes = await getFilmes()
     filmes.forEach(filme => {
         const card = criarCard(filme)
         container.appendChild(card)
-        console.log(card)
+        console.log(filme)
     })
 }
 
+async function setIdFilme(){
+    const idFilme = this.id
+    localStorege.setItem('idFilme', idFilme)
+}
+
 preencherContainer()
-
-// const filme = {
-
-//             "nome": "Teste",
-//             "sinopse": "Lenny (Adam Sandler), Eric (Kevin James), Kurt (Chris Rock) e Marcus (David Spade) voltam a morar na mesma cidade. Lá, suas vidas seguem o curso natural dos adultos, seja pela existência dos problemas com as esposas para uns, com os filhos para outros, ou tudo junto e misturado. A coisa dá uma complicada quando os marmanjos pretendiam matar a saudade num dia de folga e acabam encarando os jovens da região, que agora dominam o lugar. É quando eles acabam tendo que enfrentar alguns fantasmas do passado, entre eles a covardia diante de valentões e o famigerado bullyng na escola. Mas algumas surpresas estão para acontecer, como a chegada de um filho rebelde para Marcus domar, uma possível gravidez e uma festa de arromba, que não vai deixar pedra sobre pedra.",
-//             "duracao": "01:41:00",
-//             "data_lancamento": "2013-08-16",
-//             "data_relancamento": null,
-//             "foto_capa": "https://br.web.img3.acsta.net/c_310_420/pictures/210/049/21004903_20130510170049514.jpg",
-//             "valor_unitario": 55
-//         }
-
-deleteFilme()

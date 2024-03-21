@@ -1,4 +1,4 @@
-export async function getFilmes(id) {
+export async function getFilmes() {
     const url = 'http://localhost:8080/v2/ACMEFilmes/filmes'
     const response = await fetch(url)
     const data = await response.json()

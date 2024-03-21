@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="./js/main.js" type="module" defer></script>
     <title>ACME FILMES</title>
     <script>
         tailwind.config = {
@@ -16,7 +17,7 @@
                 indie: ['Khula', 'cursive']
               },
               spacing: {
-                ll: '120px'
+                ll: '120px',
               }
             }
           }
@@ -24,11 +25,12 @@
       </script>
 </head>
 <body class="bg-principal">
-    <header class="flex justify-center">
+    <header class="">
+
         <div class="p-2 flex items-center flex-col">
             <img class="h-16 mb-10" src="./img/logo.png" alt="">
             <div class="flex flex-row">
-                <div class="flex flex-row space-x-6">
+                <div class="flex flex-row space-x-6 p-5 -ml-96 mr-36">
                     <h2 class="text-yellow-500">
                         FILMES
                     </h2>
@@ -37,10 +39,26 @@
                     </h2>
                 </div>
                     <input class="w-96 h-10 rounded-full indent-8" type="text" placeholder="Procurar um filme...">
-                
             </div>
         </div>
-        
+        <div class="-my-24 flex flex-row-reverse mr-40">
+          <img src="./img/perfil.png" alt="">
+        </div>
+        <div class="text-white mr-40 flex flex-row-reverse pt-24 pr-2">
+          <h2>
+            Cleiton
+          </h2>
+        </div>
+        <div class="text-white">
+          <h2 class="pt-9 pl-48 font-medium">
+            FILMES EM DESTAQUE
+          </h2>
+        </div>
     </header>
+
+    <main id="lista_filmes">
+
+
+    </main>
 </body>
 </html>
