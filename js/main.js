@@ -34,7 +34,7 @@ async function preencherContainer(){
 async function setIdFilme(){
     const idFilme = this.id
     localStorage.setItem('idFilme', idFilme)
-    window.location.href='../telas/descricao.html'
+    window.location.href = '../telas/descricao.html'
 }
 
 preencherContainer()
