@@ -27,14 +27,13 @@ async function preencherContainer(){
     filmes.forEach(filme => {
         const card = criarCard(filme)
         container.appendChild(card)
-        // console.log(filme)
     })
 }
 
 async function setIdFilme(){
     const idFilme = this.id
     localStorage.setItem('idFilme', idFilme)
-    window.location.href = '../telas/descricao.html'
+    window.location.href = '../telas/home.html'
 }
 
 preencherContainer()

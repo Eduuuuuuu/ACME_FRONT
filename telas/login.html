@@ -3,33 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Irish+Grover&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./src/style.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="../js/login.js" type="module"></script>
+    <title>LOGIN</title>
+
     <script>
         tailwind.config = {
           theme: {
-            extend: {
+            extend: { 
               colors: {
-                background: '#000000',
+                cor: '#000000'
               },
               fontFamily: {
                 indie: ['Khula', 'cursive']
               },
-              fontSize: {
-                
-              },
-              spacing: {
-                
-              },
+              spacing:{
+                w: '60%',
+                left: '80px',
+                top: '450px',
+                leftPesquisa: '720px',
+                topPesquisa: '20px',
+                leftButton: '40px',
+                topButton: '-48px',
+                gapButton: '54px',
+                widthButton: '120px',
+                userTop: '3%',
+                widthMais: '34px',
+                maisTop: '280px',
+                rigthMais: '840px',
+                widthImg: '600px',
+                heigthImg: '140px',
+                userTop2: '2%',
+                widthuser2: '80px',
+                topUser2: '100px'
+              }
             }
           }
         }
-    </script>
-    <title>LOGIN</title>
+      </script>
 </head>
-<body class="bg-background flex flex-col" >
-    <header class="flex justify-center">
-        <img src="../img/logo.png" alt="" class="p-10">
-    </header>
+
+<body class="bg-cor w-[100%] h-[919px] z[-1]">
+
+    <div class=" fixed flex left-[950px]  top-[120px]">
+        <img class="w-[850px]"  src="../img/image 5.png" alt="">
+    </div>
+
+    <h1 class="text-5xl font-black text-white fixed top-[240px] right-[730px] fontFamily">
+        <pre>
+            Acesse sua conta
+        </pre>
+    </h1>
+
+    <label class="block">
+        <span class="after:content-['*'] after:ml-0.9 text-white :text-red-500  text-[24px] text-slate-900 fixed top-[400px] w-[440px] left-[730px]">
+          Email
+        </span>
+        <input type="email" name="email" class=" fixed top-[440px] w-[420px] left-[730px] py-3 bg-white border shadow-sm border-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block indent-4 rounded-md sm:text-sm focus:ring-1" placeholder="Seu E-mail" />
+      </label>
+
+      <label class="block">
+
+        <span class="after:content-['*'] after:ml-0.9 after: text-white  text-[24px] text-slate-900 fixed top-[500px] w-[440px] left-[730px]">
+          Senha
+        </span>
+
+        <input type="password" name="password" class=" fixed top-[540px] w-[420px] left-[730px] py-3 bg-white border shadow-sm border-slate-200 placeholder-slate-400 focus:outline-none focus:border-sky-500 focus:ring-sky-500 block indent-4 rounded-md sm:text-sm focus:ring-1" placeholder="*********" />
+      </label>
+
+      <button type="button" class=" bg-red-400 fixed w-[200px] h-[60px] top-[680px] left-[890px] rounded-lg rounded border-4 bg-white pt-0 text-2xl active:bg-red-200 focus:outline-none focus:ring focus:ring-violet-300 ">
+     <div>
+      
+        <a class="w-full" href="./cms.html" alt="">
+          <h1 class="text-black font-bold">
+            Entrar
+          <h1>
+        </a>
+     
+     </div>
+  
+</button>
+
+    <h1 class="text-1xl font-black text-white fixed top-[600px] right-[1029px]">
+        Esqueci minha senha
+    </h1>
+
 </body>
 </html>

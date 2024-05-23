@@ -7,7 +7,7 @@ const id = localStorage.getItem('idFilme')
 async function preencherTela(){
 
     const filmeArray = await getFilmeById(id)
-    const filme = filmeArray[0]
+    const filme = filmeArray
     console.log(filme)
 
     document.title = filme.nome

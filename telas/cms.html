@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <link rel="stylesheet" href="./src/cms.css">
+    <link rel="stylesheet" href="./src/menu.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Khula:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script type="module" src="../js/cms.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>CMS</title>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: { 
+            colors: {
+                cor: '#000000',
+                cor2: '#FF4500'
+            },
+            fontFamily: {
+                'indie': ['Khula', 'cursive']
+            },
+            spacing:{
+              w: '90%',
+              left: '80px',
+              top: '450px',
+              leftPesquisa: '720px',
+              topPesquisa: '20px',
+              leftButton: '40px',
+              topButton: '-48px',
+              gapButton: '54px',
+              widthButton: '290px',
+              userTop: '3%',
+              widthMais: '34px',
+              maisTop: '280px',
+              rigthMais: '840px',
+              widthImg: '600px',
+              heigthImg: '140px',
+              userTop2: '2%',
+              widthuser2: '80px',
+              topUser2: '100px'
+            }
+          }
+        }
+      }
+    </script>
+</head>
+
+<body class="bg-cor font-indie">
+
+    <div class="h-[50px] w-full bg-cor2"></div>
+
+    <div class="absolute top-[10px] left-[50%] flex">
+        <a href="./cms.html" class="block px-4 py-2 text-white hover:bg-gray-700">FILME</a>
+    </div>
+
+    <header class="h-24 flex justify-between items-center">
+    
+    <button class="absolute left-[90%] top-[5px] text-white bg-cor p-3 text-center rounded-[18px] flex items-center transform hover:scale-105 duration-300" id="add">
+        <a class=' bx text-center font-indie' href="./cadastrar.html" > ADD NEW</a>
+    </button>
+
+      <div class="select-arrow"></div>
+  </div>
+  </div>
+
+        <div class="h-12 flex items-center gap-5">
+                <i class='font-bold text-center text-3xl' id="add"></i>
+            </button>
+        </div>
+
+    </header>
+
+    <main class="h-5/6 w-full">
+        <div class="h-14 grid grid-cols-4 place-items-center">
+            <h1 class="text-white   text-3xl h-full flex items-center">ID</h1>
+            <div class="text-white  text-3xl h-full flex items-center">FILME</div>
+            <div class="text-white  text-3xl h-full flex items-center">VALOR</div>
+        </div>
+        <div id="container">
+        </div>  
+    </main>
+
+
+
+</body>
+
+</html>

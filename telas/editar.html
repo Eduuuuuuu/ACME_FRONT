@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/input.css">
+    <link rel="stylesheet" href="./src/output.css">
+    <script type="module" src="./editar.html"></script>
+    <script type="module" src="../js/edit.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>EDITAR FILME</title>
+</head>
+<body class="h-screen bg-[#000000]">
+
+    <header class="h-24 flex justify-center items-center p-12 bg-[#FF4500] border-b-4 border-[#ffffFF]">
+
+        <a href="./cms.html" class="text-[#ffffff] text-3xl">
+            EDITAR FILME
+        </a>
+        <ul class="flex gap-4">
+
+        </ul>
+    </header>
+
+    <main class="h-4/5">
+        <div class="flex w-full h-full justify-around items-center" id="container">
+
+            <div class="flex gap-5 flex-col" id="infoFilme">
+
+                <div class="flex items-center justify-center gap-2">
+                    
+                    <p class="text-[#ffffff] text-3xl">
+                        Nome do filme:
+                    </p>
+                    <input type="text" class="outline-none rounded-[15px] p-3 w-96 border-4 border-[#ffffFF] bg-[#19191A] text-[#ffffFF] text-2xl" id="nome">
+                </div>
+
+                <div class="flex items-center gap-4">
+
+                    <p class="text-[#ffffff] text-3xl">
+                        Sinopse:
+                    </p>
+                    <textarea name=""  cols="30" rows="5" class="w-96 outline-none rounded-[15px] border-4 border-[#ffffFF] bg-[#19191A] text-[#ffffFF] text-1xl" id="sinopse"></textarea>
+                </div>
+
+                <div class="flex items-center gap-4">
+
+                    <p class="text-[#ffffff] text-3xl">
+                        Duração:
+                    </p>
+                    <input type="text" class="p-3 outline-none rounded-[15px] border-4 border-[#ffffFF] bg-[#19191A] text-[#ffffFF] text-2xl" id="duracao">
+                </div>
+
+                <div class="flex items-center gap-2">
+
+                    <p class="text-[#ffffff] text-3xl">
+                        Lançamento:
+                    </p>
+                    <input type="date" class="p-3 outline-none rounded-[15px] border-4 border-[#ffffFF] bg-[#19191A] text-[#ffffFF] text-2xl" id="lancamento">
+                </div>
+
+                <div class="flex items-center gap-2">
+
+                    <p class="text-[#ffffff] text-3xl">
+                        Relançamento:
+                    </p>
+                    <input type="date" class="p-3 outline-none rounded-[15px] border-4 border-[#ffffFF] bg-[#19191A] text-[#ffffFF] text-2xl" id="relancamento">
+                </div>
+
+                <div class="flex items-center gap-2">
+
+                    <p class="text-[#ffffff] text-3xl">
+                        Valor:
+                    </p>
+                    <input type="text" class="p-3 outline-none rounded-[15px] border-4 border-[#ffffFF] bg-[#19191A] text-[#ffffFF] text-2xl" id="valor">
+                </div>
+
+                <div class="flex items-center gap-2">
+
+                    <p class="text-[#ffffff] text-3xl">
+                        Classificação:
+                    </p>
+                    <select name="" class="p-3 outline-none rounded-[15px] bg-white text-black text-2xl" id="classificacao"></select>
+                </div>
+            </div>
+
+            <div class="" id="capaFilme">
+
+                <div class="posterFilme bg-[#7A7A7A] text-[#ffffff] h-fit w-fit flex flex-col items-center border-4 border-[#ffffFF]">
+
+                    <img id="poster" class="w-64">
+                    <input type="text" id="link" class="w-full outline-none bg-[#19191A] font-bold" placeholder="Link da imagem">
+
+                </div>
+
+                <button class="p-3 border-4 border-[#ffffFF] m-10 text-[#ffffff] font-bold hover:bg-[#ffffff] hover:text-[#FF4500] transition ease-in-out block" id="salvar">SALVAR ALTERAÇÕES</button>
+            </div>
+        </div>
+    </main>
+    
+</body>
+</html>
+<style>
+    .posterFilme > img {
+        aspect-ratio: 2/3;
+    }
+
+textarea{
+    resize: none;
+}
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        filter: invert(84%) sepia(27%) saturate(2276%) hue-rotate(338deg) brightness(96%) contrast(90%);
+}
+</style>
